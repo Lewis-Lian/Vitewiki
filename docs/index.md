@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "LewisWiki"
-  text: " "
+  text: "由Vite和Vue驱动"
   tagline: 下定决心，不怕牺牲，排除万难，去争取胜利
   image:
         src: /logo.png
