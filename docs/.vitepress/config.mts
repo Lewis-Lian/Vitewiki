@@ -3,6 +3,7 @@ import { defineConfig ,type DefaultTheme} from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
    lastUpdated: true,// 设置为 true 以启用最后更新时间戳
+   base: '/Vitewiki/',
   title: "LewisWiki",
   description: "Lewis的个人Wiki",
    head: [
