@@ -127,7 +127,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/Lewis-Lian' }
+      { icon: 'github', link: 'https://github.com/Lewis-Lian/Vitewiki' }
     ],
     footer: {
       message: `<a href="https://wiki.i615.cn/" target="_blank">浙ICP备16001001号</a>`,
