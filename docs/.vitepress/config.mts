@@ -115,7 +115,7 @@ export default defineConfig({
         { text: '基础知识', 
           collapsed: false,
           items: [
-            { text: 'windows络诊断工具常用命令', link: '/Studynotes/win/1/1-1' },
+            { text: '网诊断工具常用命令', link: '/Studynotes/win/1/1-1' },
           ]
          },
       ]
