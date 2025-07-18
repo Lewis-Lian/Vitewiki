@@ -79,6 +79,7 @@ export default defineConfig({
       collapsed: false,
       items: [
         { text: '基础知识', 
+          collapsed: false,
           items: [
             { text: 'v3程序设计的语言和分类', link: '/Studynotes/python/1/1-1' },
             { text: 'Python 安装与环境配置指南', link: '/Studynotes/python/1/1-2' },
@@ -96,12 +97,25 @@ export default defineConfig({
       collapsed: false,
       items: [
         { text: '基础知识', 
+          collapsed: false,
           items: [
             { text: 'JAVA简介', link: '/Studynotes/java/1/1-1' },
             { text: 'Java进阶', link: '/Studynotes/java/1/1-2' },
             { text: 'Java数据结构与算法', link: '/Studynotes/java/1/1-3' },
             { text: 'Java 注释', link: '/Studynotes/java/1/1-4' },
             { text: 'Java 对象和类', link: '/Studynotes/java/1/1-5' }
+          ]
+         },
+      ]
+    },
+    {
+      text: 'Windows',
+      collapsed: true,
+      items: [
+        { text: '基础知识', 
+          collapsed: false,
+          items: [
+            { text: 'windows络诊断工具常用命令', link: '/Studynotes/win/1/1-1' },
           ]
          },
       ]
