@@ -85,7 +85,8 @@ export default defineConfig({
             { text: 'Python 安装与环境配置指南', link: '/Studynotes/python/1/1-2' },
             { text: 'Python输入和输出', link: '/Studynotes/python/1/1-3' },
             { text: '程序设计的语言和分类', link: '/Studynotes/python/1/1-4' },
-            { text: '字符串和编码', link: '/Studynotes/python/1/1-5' }
+            { text: '字符串和编码', link: '/Studynotes/python/1/1-5' },
+            { text: '使用list和tuple', link: '/Studynotes/python/1/1-6' }
             
           ]
 
