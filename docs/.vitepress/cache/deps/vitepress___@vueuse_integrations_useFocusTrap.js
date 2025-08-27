@@ -3,13 +3,13 @@ import {
   toArray,
   tryOnScopeDispose,
   unrefElement
-} from "./chunk-3GYA4YLH.js";
+} from "./chunk-WR2MURSS.js";
 import {
   computed,
   shallowRef,
   toValue,
   watch
-} from "./chunk-DDXJJ377.js";
+} from "./chunk-XTWMKXGO.js";
 
 // node_modules/tabbable/dist/index.esm.js
 var candidateSelectors = ["input:not([inert])", "select:not([inert])", "textarea:not([inert])", "a[href]:not([inert])", "button:not([inert])", "[tabindex]:not(slot):not([inert])", "audio[controls]:not([inert])", "video[controls]:not([inert])", '[contenteditable]:not([contenteditable="false"]):not([inert])', "details>summary:first-of-type:not([inert])", "details:not([inert])"];
@@ -1097,21 +1097,29 @@ function useFocusTrap(target, options = {}) {
     (els) => {
       if (!els.length)
         return;
-      trap = createFocusTrap(els, {
-        ...focusTrapOptions,
-        onActivate() {
-          hasFocus.value = true;
-          if (options.onActivate)
-            options.onActivate();
-        },
-        onDeactivate() {
-          hasFocus.value = false;
-          if (options.onDeactivate)
-            options.onDeactivate();
+      if (!trap) {
+        trap = createFocusTrap(els, {
+          ...focusTrapOptions,
+          onActivate() {
+            hasFocus.value = true;
+            if (options.onActivate)
+              options.onActivate();
+          },
+          onDeactivate() {
+            hasFocus.value = false;
+            if (options.onDeactivate)
+              options.onDeactivate();
+          }
+        });
+        if (immediate)
+          activate();
+      } else {
+        const isActive = trap == null ? void 0 : trap.active;
+        trap == null ? void 0 : trap.updateContainerElements(els);
+        if (!isActive && immediate) {
+          activate();
         }
-      });
-      if (immediate)
-        activate();
+      }
     },
     { flush: "post" }
   );
